@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/driver_button_color">
+
+    <!-- Search Bar -->
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="142dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#3F51B5"
+        android:elevation="2dp">
+
+        <EditText
+            android:id="@+id/current_location"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="Enter current location"
+            android:inputType="text"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:drawableStart="@drawable/mylocation"
+            android:drawablePadding="8dp" />
+
+        <EditText
+            android:id="@+id/destination"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="Enter destination"
+            android:inputType="text"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:drawableStart="@drawable/ic_destination"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="8dp" />
+
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_search"
+            android:contentDescription="Search"
+            android:layout_gravity="end"
+            android:layout_marginTop="-80dp"
+            android:backgroundTint="#2196F3" />
+    </LinearLayout>
+
+    <!-- Map View -->
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/maps"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:layout_below="@id/search_bar"
+        android:layout_marginTop="17dp"
+        android:contentDescription="maps" />
+
+    <!-- ETA Prompt -->
+    <!-- ETA Prompt -->
+    <LinearLayout
+        android:id="@+id/driver_eta_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/maps"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_margin="12dp"
+        android:background="@android:color/white"
+        android:elevation="6dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/eta_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🚗 Driver arriving in 5 mins..."
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="12dp" />
+
+        <ProgressBar
+            android:id="@+id/eta_progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/swipe_progress_bar"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+
+    <!-- Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="#2196F3"
+        android:elevation="4dp">
+
+        <ImageButton
+            android:id="@+id/home"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/icon1"
+            android:contentDescription="Home"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp" />
+
+        <ImageButton
+            android:id="@+id/ride"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/icon2"
+            android:contentDescription="Ride"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp" />
+
+        <ImageButton
+            android:id="@+id/mapZ"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/icon3"
+            android:contentDescription="Map"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp" />
+
+        <ImageButton
+            android:id="@+id/chat"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/icon4"
+            android:contentDescription="Chat"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp" />
+
+        <ImageButton
+            android:id="@+id/account"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/icon5"
+            android:contentDescription="Account"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp" />
+    </LinearLayout>
+
+</RelativeLayout>
