@@ -16,7 +16,7 @@ public class register extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.register_page);
+        setContentView(R.layout.activity_main);
 
         ImageButton homeButton = findViewById(R.id.home);
         homeButton.setOnClickListener(new View.OnClickListener() {
